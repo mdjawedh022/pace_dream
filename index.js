@@ -2,6 +2,7 @@ const express=require("express");
 const {connection} =require("./utils/db");
 const cors=require('cors');
 const { log } = require("console");
+const { hotelRouter } = require("./routes/hotel.routes");
 require("dotenv").config();
 
 const app=express();
@@ -13,6 +14,8 @@ app.get('/',(req,res)=>{
 
 app.use(cors());
 app.use(express.json());
+
+app.use("/api/hotel", hotelRouter);
 
 app.listen(process.env.port,async()=>{
     try{

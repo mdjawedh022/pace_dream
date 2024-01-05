@@ -3,8 +3,8 @@ const mongoose=require("mongoose");
 const hotelSchema = mongoose.Schema(
   {
     name: { type: String, required: true },
-    image: [{ type: stringify, required: true }],
-    description: { type: string, required: true },
+    image: [{ type: String, required: true }],
+    description: { type: String, required: true },
     offered: [
       {
         free_parking: { type: Boolean, required: true },
@@ -52,7 +52,7 @@ const hotelSchema = mongoose.Schema(
     guests: { type: Number, required: true },
     bedrooms: { type: Number, required: true },
     beds: { type: Number, required: true },
-    bathsrooms: { type: Number, required: true },
+    bathrooms: { type: Number, required: true },
     hours: { type: Number },
     days: [
       {
@@ -65,8 +65,8 @@ const hotelSchema = mongoose.Schema(
         sunday: { type: Number },
       },
     ],
-    set_price:{type:Number,required:true},
-     location: {
+    set_price: { type: Number, required: true },
+    location: {
       type: { type: String, default: "Point" },
       coordinates: { type: [Number], required: true },
     },
@@ -78,7 +78,7 @@ const hotelSchema = mongoose.Schema(
 hotelSchema.index({ location: "2dsphere" });
 
 
-const hotelModel=mongoose.Model("Hotel_Details",hotelSchema)
+const hotelModel = mongoose.model("Hotel_Details", hotelSchema);
 
 module.exports={
     hotelModel
