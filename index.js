@@ -8,7 +8,7 @@ require("dotenv").config();
 const app=express();
 
 app.get('/',(req,res)=>{
-    res.send("welecom to paceDream Hotel backend api!");
+    res.send("welecome to paceDream Hotel backend api!");
 
 });
 
