@@ -1,115 +1,120 @@
-## PaceDream Hotel Backend API ##
+## PaceDream Hotel Backend API ## </br>
 Welcome to the PaceDream Hotel Backend API! This API is designed to handle hotel-related data, providing endpoints for posting and retrieving hotel information.
+</br>
 
-Getting Started
+Getting Started 
+</br>
 To run this project locally, follow these steps:
+</br>
 
-Prerequisites
-Node.js installed on your machine
-MongoDB installed and running
-Installation
-Clone the repository:
+Prerequisites </br>
+Node.js installed on your machine </br>
+MongoDB installed and running </br>
+Installation </br>
+Clone the repository: </br>
 
-bash
-Copy code
-git clone <repository-url>
+bash</br>
+     
+git clone <repository-url> </br>
 Install dependencies:
+</br>
+cd <project-folder> </br>
+npm install </br>
+Set up environment variables: </br>
 
-bash
-Copy code
-cd <project-folder>
-npm install
-Set up environment variables:
-
-Create a .env file in the root directory and add the following variables:
-
+Create a .env file in the root directory and add the following variables: 
+</br>
 makefile
-Copy code
-PORT=<your-port>
-MONGO_URI=<your-mongodb-uri>
-Running the Application
+</br>
+PORT=<your-port> </br>
+MONGO_URI=<your-mongodb-uri> </br>
+Running the Application </br>
 Start the server:
+</br>
 
-bash
-Copy code
-npm start
-Save to grepper
+npm start  </br>
+Save to grepper </br>
 The server will run on the specified port, and you should see the message "Server is running at the port <your-port>".
-
-API Endpoints
-1. POST /api/hotel/post
+</br>
+API Endpoints </br>
+1. POST /api/hotel/post </br>
 Create a new hotel entry.
-
+</br>
 Request:
-
+</br>
 
 {
-  "name": "Hotel ABC",
-  "image": ["url1", "url2"],
-  "description": "Lorem ipsum...",
-  "offered": { ... },
-  "standout_amenities": { ... },
-  "describes_your_place": { ... },
-  "room_status": { ... },
-  "gender": "both",
-  "guests": 4,
-  "bedrooms": 2,
-  "beds": 3,
-  "bathrooms": 2,
-  "price_by": [ ... ],
-  "set_price": { ... },
-  "location": {
-    "type": "Point",
-    "coordinates": [longitude, latitude]
-  }
-}
+  "name": "Hotel ABC", </br>
+  "image": ["url1", "url2"],</br>
+  "description": "Lorem ipsum...", </br>
+  "offered": { ... }, </br>
+  "standout_amenities": { ... }, </br>
+  "describes_your_place": { ... },</br>
+  "room_status": { ... },</br>
+  "gender": "both",</br>
+  "guests": 4,</br>
+  "bedrooms": 2,</br>
+  "beds": 3,</br>
+  "bathrooms": 2,</br>
+  "price_by": [ ... ],</br>
+  "set_price": { ... },</br>
+  "location": {</br>
+    "type": "Point",</br>
+    "coordinates": [longitude, latitude] </br>
+  }</br>
+}</br>
 Response:
-
-
+</br>
+</br>
 {
-  "msg": "Data sent successfully! 😊",
-  "hotelData": { ... }
-}
-2. GET /api/hotel
+  "msg": "Data sent successfully! 😊", </br>
+  "hotelData": { ... } </br>
+}</br>
+2. GET /api/hotel </br>
 Retrieve all hotel entries.
-
+</br>
 Response:
-
-[
-  {
-    "_id": "12345",
-    "name": "Hotel ABC",
-    "image": ["url1", "url2"],
-    "description": "Lorem ipsum...",
-    "offered": { ... },
-    "standout_amenities": { ... },
-    "describes_your_place": { ... },
-    "room_status": { ... },
-    "gender": "both",
-    "guests": 4,
-    "bedrooms": 2,
-    "beds": 3,
-    "bathrooms": 2,
-    "price_by": [ ... ],
-    "set_price": { ... },
-    "location": {
-      "type": "Point",
-      "coordinates": [longitude, latitude]
-    },
-    "createdAt": "timestamp",
-    "updatedAt": "timestamp"
-  },
+</br>
+[</br>
+  {</br>
+    "_id": "12345",</br>
+    "name": "Hotel ABC",</br>
+    "image": ["url1", "url2"],</br>
+    "description": "Lorem ipsum...",</br>
+    "offered": { ... },</br>
+    "standout_amenities": { ... }, </br>
+    "describes_your_place": { ... },</br>
+    "room_status": { ... },</br>
+    "gender": "both",</br>
+    "guests": 4,</br>
+    "bedrooms": 2,</br>
+    "beds": 3,</br>
+    "bathrooms": 2,</br>
+    "price_by": [ ... ],</br>
+    "set_price": { ... },</br>
+    "location": {</br>
+      "type": "Point",</br>
+      "coordinates": [longitude, latitude] </br>
+    },</br>
+    "createdAt": "timestamp",</br>
+    "updatedAt": "timestamp"</br>
+  },</br>
   // ... other hotel entries
-]
+]</br>
 Deployment
+</br>
 The API is deployed at https://pacedream.onrender.com/.
-
-Technologies Used
-Node.js
-Express.js
-MongoDB
-Mongoose
-CORS
-Contributing
+</br>
+</br>
+Tech-stack Used
+</br>
+Node.js </br>
+Express.js </br> 
+MongoDB </br>
+Mongoose </br>
+CORS </br>
+Contributing   </br>
 Feel free to contribute by submitting issues or pull requests.
+</br>
+</br>
 
